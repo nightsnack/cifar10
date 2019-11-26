@@ -71,11 +71,13 @@ The classes are completely mutually exclusive. There is no overlap between autom
 \hspace{1.5em}We are going to train a neuron networks to do classification.
 
 Before load data, we will first do a preprocessing step. The $32\times32$ images have to be reshape to match the neuron networks input.
+
 Then we can apply image augmentation to prevent overfitting. We can normalize the RGB values by dividing the x\_train and x\_test values by 255.
 Also, we could convert the images to grayscale, apply discrete histogram flattening, apply de-noising filters, or separate the phase and magnitude of the images to create more features if needed. These tasks are based on the error rate of neuron networks output.
 
-After that, we will use CNN to generate an efficient model. We will find an appropriate activation function and the number of convolution layers and pooling layers.
+After that, we will use CNN to generate an efficient classification model. We will find an appropriate activation function and the number of convolution layers and pooling layers.
+The fully-connected output layer needs a softmax activation to calculate the loss. To test how the model trains with respect to epochs, we can train the model on 20, 50, or more epochs.
 
-Finally, the fully-connected output layer needs a softmax activation to calculate the loss. To test how the model trains with respect to epochs, we can train the model on 20, 50, or more epochs.
+Finally, we will validate our model on the testing data, evaluate the loss and accuracy and visualize the result.
 
 \end{document}
