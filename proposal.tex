@@ -30,15 +30,14 @@
 
 \section{Question Description}
 
-\hspace{1.5em}CIFAR-10 is an established computer-vision dataset used for object recognition. It is a subset of the 80 million tiny images dataset and consists of 60,000 32x32 color images containing one of 10 object classes, with 6000 images per class. It was collected by Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton.
+\hspace{1.5em}On Kaggle, CIFAR-10 dataset is used for an object recognition competition. The competition aims to train machine learning model and develop algorithms for classifying the images and predicting the label for each image in the test set, as accurate as possible. So our team want to participate in the Kaggle challenge and see how much accuracy we can get. 
 
-There are 50,000 training images and 10,000 test images in the official data. 
-For each image in the test set, the algorithm should predict a label for the given id. The labels must match the official labels exactly \{airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck\}.
+Hopefully our model will generate the labels that match the official labels. We will evaluate and visualize our object recognition results. 
 
 \section{Source of Data}
 CIFAR-10 data was collected by Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton. The dataset can be found on Kaggle.com and cs.toronto.edu (Alex Krizhevsky's personal website)
 
-In this project, we use the dataset from Kaggle.com and the link is shown below:
+In this project, we just use the dataset from Kaggle.com and the link is shown below:
 
 \url{https://www.kaggle.com/c/cifar-10/data}
 
@@ -71,12 +70,12 @@ The classes are completely mutually exclusive. There is no overlap between autom
 \section{Outline of approach}
 \hspace{1.5em}We are going to train a neuron networks to do classification.
 
-Before load data, we will doing a data cleaning step first. The $32\times32$ images have to be reshape to match the neuron networks input.
-we can normalize the RGB values by dividing the x\_train and x\_test values by 255.
+Before load data, we will first do a preprocessing step. The $32\times32$ images have to be reshape to match the neuron networks input.
+Then we can apply image augmentation to prevent overfitting. We can normalize the RGB values by dividing the x\_train and x\_test values by 255.
 Also, we could convert the images to grayscale, apply discrete histogram flattening, apply de-noising filters, or separate the phase and magnitude of the images to create more features if needed. These tasks are based on the error rate of neuron networks output.
 
-About CNN, we will find an appropriate activation function and the number of convolution layers and pooling layers.
+After that, we will use CNN to generate an efficient model. We will find an appropriate activation function and the number of convolution layers and pooling layers.
 
-Lastly, the fully-connected output layer needs a softmax activation to calculate the loss. To test how the model trains with respect to epochs, we can train the model on 20, 50, or more epochs.
+Finally, the fully-connected output layer needs a softmax activation to calculate the loss. To test how the model trains with respect to epochs, we can train the model on 20, 50, or more epochs.
 
 \end{document}
