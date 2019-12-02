@@ -1,0 +1,10 @@
+/data/train/
+/data/test/
+/data/train_tiny/
+/data/test_tiny/
+/data/test.7z
+/data/train.7z
+/data/train_valid_test/
+/data/trainLabels.csv
+/venv/
+/.idea/
