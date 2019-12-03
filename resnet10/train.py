@@ -11,8 +11,8 @@ demo = True;
 if demo:
     import zipfile
     for f in ['train_tiny.zip', 'test_tiny.zip', 'trainLabels.csv.zip']:
-        with zipfile.ZipFile('/data/' + f, 'r') as z:
-            z.extractall('/data/')
+        with zipfile.ZipFile('data/' + f, 'r') as z:
+            z.extractall('data/')
 
 def reorg_cifar10_data(data_dir, label_file, train_dir, test_dir, input_dir, valid_ratio):
     # Reorganize train & test data prevent overfit
