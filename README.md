@@ -28,11 +28,11 @@ Mxnet need Nvidia cuda 8.0, if your computer doe not have Nvidia GPU plese comme
 mxnet-cu80==1.5.0
 ```
 
-Running train function:
+Running train function in the project folder:
 
-   ```python
+```python
 Python main.py
-   ```
+```
 
 The output is a csv file contains 30,000 labels of test dataset.
 
