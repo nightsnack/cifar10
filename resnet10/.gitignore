@@ -8,3 +8,4 @@
 /data/trainLabels.csv
 /venv/
 /.idea/
+*.DS_Store
