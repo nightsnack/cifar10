@@ -10,7 +10,11 @@ Kaggle is hosting a CIFAR-10 leaderboard for the machine learning community to u
 
 ## Deploy Instructions:
 
-**Tested on: Ubuntu 16.04, Python 3.5, CUDA-8.0**
+**Tested successfully on: Ubuntu 16.04, Python 3.5, CUDA-8.0**
+
+Download cifar10 data:
+
+Download Data from Kaggle, you will get **train.7z** and **test.7z**, put the two file into **/data** directory, uncompress them.
 
 Install requirements:
 
@@ -18,7 +22,11 @@ Install requirements:
 pip install -r requirements
 ```
 
-Mxnet need Nvidia cuda 8.0, if your computer doe not have Nvidia GPU plese comment on the line mxnet-cu80==1.5.0
+Mxnet need Nvidia cuda 8.0, if your computer doe not have Nvidia GPU plese comment on the line
+
+``` python
+mxnet-cu80==1.5.0
+```
 
 Running train function:
 
