@@ -9,7 +9,7 @@ import shutil
 import time
 import utils
 
-demo = True;
+demo = False;
 if demo:
     import zipfile
     for f in ['train_tiny.zip', 'test_tiny.zip', 'trainLabels.csv.zip']:
@@ -88,8 +88,11 @@ else:
 
 data_dir, label_file = 'data/', 'trainLabels.csv'
 input_dir, valid_ratio = 'train_valid_test', 0.1
+
+print("Doing Data Cleaning:")
 reorg_cifar10_data(data_dir, label_file, train_dir, test_dir, input_dir,
                        valid_ratio)
+print("Data Cleaning Finished.")
 
 transform_train = gdata.vision.transforms.Compose([
     # 将图像放大成高和宽各为40像素的正方形
@@ -168,9 +171,9 @@ def train(net, train_iter, valid_iter, num_epochs, lr, wd, ctx, lr_period,
 if __name__ == '__main__':
     ctx, num_epochs, lr, wd = d2l.try_gpu(), 1, 0.1, 5e-4
     lr_period, lr_decay, net = 80, 0.1, get_net(ctx)
-    net.hybridize()
-    train(net, train_iter, valid_iter, num_epochs, lr, wd, ctx, lr_period,
-          lr_decay)
+    # net.hybridize()
+    # train(net, train_iter, valid_iter, num_epochs, lr, wd, ctx, lr_period,
+    #       lr_decay)
 
 
 
